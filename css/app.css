@@ -172,7 +172,6 @@
   footer {box-sizing:border-box;border-top:1px solid #ccc;background:rgb(221, 221, 221) ;}
   footer p{margin:0;color:#666;text-align:center;}
 
-
   /*  BREAKPOINTs -------------------------------------------------- */
   @media (min-width: 30rem) {
     h1 {font-size:1.8rem;line-height:2.5rem;}
@@ -180,6 +179,8 @@
   	h3 {font-size:1.2rem;line-height:1.8rem;}
   	h4, h5, h6 {margin-bottom:1.5rem;}
     header{height:14rem; }
+    p{text-align:left;}
+    footer p{text-align:left;}
 
   }
 
