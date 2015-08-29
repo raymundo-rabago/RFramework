@@ -1,9 +1,12 @@
 var gulp = require("gulp"),
     postcss = require("gulp-postcss"),
+    cssimport = require("postcss-import"),
+    cssnested = require('postcss-nested'),
     cssnext = require("cssnext"),
     concat = require("gulp-concat"),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
+    jade = require('gulp-jade'),
     browserSync = require('browser-sync');
 
 // main controller tasks
@@ -21,6 +24,7 @@ gulp.task('browser-sync', function() {
 
 // watch tasks
 gulp.task('watch', function () {
+    gulp.watch(['./*'], ['templates']);
     gulp.watch(['css/**/*'], ['css']);
     gulp.watch(['js/*/*'], ['js']);
 });
@@ -37,10 +41,22 @@ gulp.task('js', function() {
 // CSS
 gulp.task("css", function() {
     var processors = [
-        cssnext({ 'compress': true });
+        cssimport(),
+        cssnext({ 'compress': true }),
+        cssnested(),
+        csslost()
     ];
     return gulp.src('css/libs/app.css')
         .pipe(postcss(processors))
         .pipe(rename( {suffix: ".min"} ))
         .pipe(gulp.dest('css'));
+});
+
+// html
+gulp.task('templates', function() {
+  return gulp.src('views/*.jade')
+    .pipe(jade({
+      pretty: true
+    }))
+    .pipe(gulp.dest('./'))
 });
