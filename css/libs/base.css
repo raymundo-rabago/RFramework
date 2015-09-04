@@ -29,8 +29,8 @@ details {margin-bottom:1.5rem;}
 details p {padding:.5rem 0 0 .8rem;}
 summary {font-weight:bold;cursor:pointer;}
 
-a,a:visited {color:#333;text-decoration:none;outline:0;line-height:calc(var(--fontsize) * 1.5;);}
-a:hover, a:focus {color:color(var(--theme) tint(20%));transition:all 0.3s ease;}
+a,a:visited {color:color(var(--theme) shade(50%) );text-decoration:none;outline:0;line-height:calc(var(--fontsize) * 1.5;);}
+a:hover, a:focus {color:var(--theme);transition:all 0.3s ease;}
 a:active{transition:all 0s;}
 p a, p a:visited {line-height:inherit;}
 
@@ -91,11 +91,11 @@ button::-moz-focus-inner,input::-moz-focus-inner {border:0;padding:0;}
 }
 :--buttons:hover {
   background:color( var(--default) shade(18%) ); transition:all .5s ease;
-  box-shadow: 0 -80px 0px rgba(0,0,0,.05) inset, 0 80px 0px rgba(0,0,0,.05) inset;
+  box-shadow: 0 -80px 0px rgba(0,0,0,.06) inset, 0 80px 0px rgba(0,0,0,.06) inset;
 }
 :--buttons:active {
   border:0;background:color( var(--default) shade(38%) );transform:scale(.99,.99);transition:all 0;
-  box-shadow: 0 -80px 0px rgba(0,0,0,.2) inset;
+  box-shadow: 0 -80px 0px rgba(0,0,0,.4) inset;
 }
 .button-theme{background:var(--theme)!important;color:white!important;}
 .button-support{background:var(--support)!important;color:white!important;}
