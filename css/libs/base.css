@@ -1,17 +1,4 @@
 
-/*  RESETS -------------------------------------------------- */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,
-q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,
-tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,
-summary,time,mark,audio,video{
-  margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-body{line-height:1}ol,ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:before,q:before{content:'';content:none}
-blockquote:after,q:after{content:'';content:none}
-table{border-collapse:collapse;border-spacing:0}
-
 /*  BASE -------------------------------------------------- */
 html {}
 body {color:var(--fontcolor);font-size:var(--fontsize);line-height:calc(var(--fontsize) * 1.5);
@@ -96,21 +83,19 @@ input[type="checkbox"] {display:inline;}
 label span,legend span {font-weight:normal;font-size:1.3rem;color:#333;}
 
 button::-moz-focus-inner,input::-moz-focus-inner {border:0;padding:0;}
-
 :--buttons {
   border:0;background:color(var(--default) shade(10%) );color:var(--fontcolor);font-size:0.7rem;
   font-weight:normal;text-decoration:none;cursor:pointer;margin-bottom:1rem;box-sizing:border-box;
   line-height:4;display:block;width:100%;text-align:center;padding:0 .7rem;
   box-shadow: 0 0 0 rgba(0,0,0,.2) inset, 0 0 0 rgba(0,0,0,.2) inset;
-
-  &:hover {
-    background:color( var(--default) shade(18%) ); transition:all .5s ease;
-    box-shadow: 0 -80px 0px rgba(0,0,0,.05) inset, 0 80px 0px rgba(0,0,0,.05) inset;
-  }
-  &:active {
-    border:0;background:color( var(--default) shade(38%) );transform:scale(.99,.99);transition:all 0;
-    box-shadow: 0 -80px 0px rgba(0,0,0,.2) inset;
-  }
+}
+:--buttons:hover {
+  background:color( var(--default) shade(18%) ); transition:all .5s ease;
+  box-shadow: 0 -80px 0px rgba(0,0,0,.05) inset, 0 80px 0px rgba(0,0,0,.05) inset;
+}
+:--buttons:active {
+  border:0;background:color( var(--default) shade(38%) );transform:scale(.99,.99);transition:all 0;
+  box-shadow: 0 -80px 0px rgba(0,0,0,.2) inset;
 }
 .button-theme{background:var(--theme)!important;color:white!important;}
 .button-support{background:var(--support)!important;color:white!important;}

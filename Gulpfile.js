@@ -1,9 +1,8 @@
 var gulp        = require("gulp"),
     postcss     = require("gulp-postcss"),
-    lost        = require('lost'),
-    cssnext     = require("cssnext"),
     cssimport   = require("postcss-import"),
-    cssnested   = require('postcss-nested'),
+    cssnext     = require("cssnext"),
+    csswring     = require("csswring"),
     concat      = require("gulp-concat"),
     rename      = require('gulp-rename'),
     uglify      = require('gulp-uglify'),
@@ -25,7 +24,7 @@ gulp.task('browser-sync', function() {
 
 // watch tasks
 gulp.task('watch', function () {
-    gulp.watch(['./*'], ['templates']);
+    gulp.watch(['views/*'], ['templates']);
     gulp.watch(['css/**/*'], ['css']);
     gulp.watch(['js/*/*'], ['js']);
 });
@@ -43,11 +42,10 @@ gulp.task('js', function() {
 gulp.task("css", function() {
     var processors = [
         cssimport(),
-        cssnested(),
-        csslost(),
-        cssnext({ 'compress': true }),
+        cssnext({ 'compress': false }),
+        csswring()
     ];
-    return gulp.src('css/libs/app.css')
+    return gulp.src('css/app.css')
         .pipe(postcss(processors))
         .pipe(rename( {suffix: ".min"} ))
         .pipe(gulp.dest('css'));
