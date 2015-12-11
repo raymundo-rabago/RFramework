@@ -1,16 +1,19 @@
-var gulp        = require("gulp"),
-    postcss     = require("gulp-postcss"),
-    cssimport   = require("postcss-import"),
-    cssnext     = require("cssnext"),
-    csswring     = require("csswring"),
-    concat      = require("gulp-concat"),
-    rename      = require('gulp-rename'),
-    uglify      = require('gulp-uglify'),
-    jade        = require('gulp-jade'),
-    browserSync = require('browser-sync');
+var gulp            = require('gulp'),
+    postcss         = require('gulp-postcss'),
+    sourcemaps      = require('gulp-sourcemaps'),
+    autoprefixer    = require('autoprefixer'),
+    lost            = require('lost'),
+    cssnext         = require('cssnext'),
+    concat          = require('gulp-concat'),
+    rename          = require('gulp-rename'),
+    uglify          = require('gulp-uglify'),
+    jade            = require('gulp-jade'),
+    browserSync     = require('browser-sync');
+
 
 // main controller tasks
 gulp.task('default', ['watch', 'browser-sync']);
+
 
 // Live reload server
 gulp.task('browser-sync', function() {
@@ -22,12 +25,14 @@ gulp.task('browser-sync', function() {
     });
 });
 
+
 // watch tasks
 gulp.task('watch', function () {
     gulp.watch(['views/*'], ['templates']);
     gulp.watch(['css/**/*'], ['css']);
     gulp.watch(['js/*/*'], ['js']);
 });
+
 
 // JavaScript
 gulp.task('js', function() {
@@ -38,18 +43,22 @@ gulp.task('js', function() {
     .pipe(gulp.dest('js'));
 });
 
+
 // CSS
 gulp.task("css", function() {
     var processors = [
-        cssimport(),
+        lost(),
         cssnext({ 'compress': false }),
-        csswring()
+        autoprefixer()
     ];
     return gulp.src('css/app.css')
+        .pipe(sourcemaps.init())
         .pipe(postcss(processors))
         .pipe(rename( {suffix: ".min"} ))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('css'));
 });
+
 
 // html
 gulp.task('templates', function() {

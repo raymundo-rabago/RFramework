@@ -9,8 +9,9 @@
 
   @custom-media --small (width >= 30rem);
   @custom-media --medium (width >= 50rem);
-  @custom-selector :--headings h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6;
-  @custom-selector :--buttons .button,a.button,button,input[type="submit"],input[type="reset"],input[type="button"];
+  @custom-selector :--headings h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6;
+  @custom-selector :--buttons .button, a.button, button, input[type="submit"], input[type="reset"], input[type="button"];
+  @custom-selector :--enter :hover, :focus;
 
   @import 'libs/reset.css';
   @import 'libs/base.css';
@@ -24,7 +25,7 @@
   header h1 {display:block;text-align:center;margin: 0;padding:4% 0;}
   header h1 img {width:6rem;}
   header h1 span {font-size:1rem;color:color(var(--theme) tint(30%) );display:block;line-height:1;}
-  section.inner img {margin-bottom:.5rem;}
+  section.inner img {margin-bottom:.4rem;}
   footer {box-sizing:border-box;border-top:1px solid #ccc;background:color(var(--default) shade(10%) );}
   footer p{margin:0;color:var(--fontcolor);text-align:center;}
 
@@ -46,5 +47,6 @@
         header{height:22rem;}
         header h1 img {width:8rem;}
         header h1 span {font-size:1rem;}
-        :--buttons {display:inline-block!important;width:auto!important;text-transform:uppercase;padding:0 1.2rem;}
+        :--buttons {display:inline-block;width:auto;text-transform:uppercase;padding:0 1.2rem;}
+        img.wide-image {margin:0 auto;display:block;}
       }

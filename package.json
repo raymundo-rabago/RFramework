@@ -13,16 +13,17 @@
   "author": "Raymundo Rabago",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.1.2",
     "browser-sync": "^2.8.2",
     "cssnext": "^1.8.4",
-    "csswring": "^4.0.0",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-jade": "^1.1.0",
     "gulp-postcss": "^6.0.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.2.0",
-    "postcss": "^5.0.4",
-    "postcss-import": "^7.0.0"
+    "lost": "^6.6.2",
+    "postcss": "^5.0.8"
   }
 }
