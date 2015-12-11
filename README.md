@@ -1,6 +1,6 @@
 # PostCSS starter workflow
 
-This is not a framework properly, but kind a set of postcss tools starter kit for websites. 
+This is not a framework properly, but kind of set of postcss tools starter kit for websites. 
 The idea is to work the new css syntax and leave the common preprocessors structure in my actual workflow; and switch the way we work in a few years under the w3c standars like web-components, es6 and css new syntax.
 
 [demo](http://raymundo-rabago.github.com/RFramework/)
