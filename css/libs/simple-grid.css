@@ -1,0 +1,20 @@
+/*  SIMPLE GRID  */
+.wrapper {margin:0 auto;width:92%;}
+.row {display:inline-block;width:100%;}
+.two-way,.three-way,.four-way,.aside,.content-left,.content-right {width:100%;margin:0 0 1rem 0;}
+
+@media (--small) {
+  .two-way {float:left;width:49%;margin-right:2%;}
+  .two-way:last-child {margin-right:0;}
+  .three-way {float:left;width:32%;margin-right:2%;}
+  .three-way:last-child {margin-right:0;}
+  .four-way {float:left;width:23.5%;margin-right:2%;}
+  .four-way:last-child {margin-right: 0;}
+  .aside {float:left;width:32%;}
+  .content-left {float:left;width:66%;margin-right:2%;}
+  .content-right {float:left;width:66%;margin-left:2%;}
+}
+
+@media (--medium) {
+  .wrapper {width:960px;}
+}
