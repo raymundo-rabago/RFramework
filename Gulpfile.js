@@ -6,6 +6,7 @@ var browserSync     = require('browser-sync').create(),
     cssnext         = require('postcss-cssnext'),
     mqpacker        = require('css-mqpacker'),
     cssnano         = require('cssnano'),
+    lost            = require('lost'),
     concat          = require('gulp-concat'),
     rename          = require('gulp-rename'),
     uglify          = require('gulp-uglify'),
@@ -19,7 +20,7 @@ gulp.task('views', function() {
     .pipe(jade({
       pretty: true
     }))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./dist'))
 });
 
 // CSS
@@ -28,12 +29,13 @@ gulp.task("css", function() {
     .pipe(postcss([
       cssimport(),
       cssnest(),
+      lost(),
       cssnext({ autoprefixer: {browsers: ['last 4 version']} }),
       mqpacker(),
       cssnano()
     ]))
     .pipe(rename( {suffix: ".min"} ))
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('./dist/assets/css'))
     .pipe(browserSync.stream());
 });
 
@@ -43,7 +45,7 @@ gulp.task('js', function() {
     .pipe(concat('app.js'))
     .pipe(uglify())
     .pipe(rename( {suffix:".min"} ))
-    .pipe(gulp.dest('js'))
+    .pipe(gulp.dest('./dist/assets/js'))
     .pipe(browserSync.stream());
 });
 
@@ -53,7 +55,7 @@ gulp.task('server', function() {
     browserSync.init({
         notify: false,
         server: {
-            baseDir: "./"
+            baseDir: "./dist"
         }
     });
 });
@@ -63,7 +65,7 @@ gulp.task('watch', function () {
     gulp.watch(['./css/**/*.css'], ['css']);
     gulp.watch(['./js/*/*.js'], ['js']);
     gulp.watch(['./views/**/**/*.jade'], ['views']);
-    gulp.watch('./*.html').on('change', browserSync.reload);
+    gulp.watch('./dist/*.html').on('change', browserSync.reload);
 });
 
 // main controller tasks

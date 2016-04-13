@@ -50,7 +50,6 @@
     body{font-size:14px;line-height:3;}
     p{line-height:2;}
     header{height:22rem;}
-    header h1 img {width:8rem;}
     header h1 span {font-size:1rem;}
     :--buttons {display:inline-block;width:auto;text-transform:uppercase;padding:0 1.2rem;}
     img.wide-image {margin:0 auto;display:block;}
