@@ -18,9 +18,9 @@ button::-moz-focus-inner,input::-moz-focus-inner {border:0;padding:0;}
 .btn-theme  {background:color(var(--theme)   shade(10%) )!important;color:color( var(--theme) tint(88%) ) !important;}
 
 /* cards */
-.card{position:relative;margin:0 0 2rem 0;box-sizing:border-box;background:white;border:1px solid #ccc;font-size:.6rem;
+.card{position:relative;margin:0 0 2rem 0;box-sizing:border-box;background:white;border:1px solid #ccc;font-size:.6rem;border-radius:3px;
 	&-header{background:color(var(--default) shade(10%) );padding:.5rem;}
-	&-header .card-title{color:var(--fontcolor);font-size:1.1em;line-height:1em;margin:0;}
+  &-title{color:var(--fontcolor);font-size:1.1em;line-height:1em;margin:0;}
 	&-img{width:100%;float:left;margin-right:.5rem}
 	&-body{overflow:hidden;padding:.5rem;}
 }
