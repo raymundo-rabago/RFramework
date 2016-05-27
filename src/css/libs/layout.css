@@ -1,0 +1,34 @@
+  header {background:color(var(--theme) shade(25%));position:relative;
+          min-height:8rem;display:flex;align-items:center;justify-content:center;z-index:1;
+  }
+  header .inner {display:flex;align-items:center;justify-content:center;}
+  header h1 {display:block;text-align:center;margin: 0;padding:4% 0;}
+  header h1 img {width:6rem;}
+  header h1 span {font-size:1rem;color:color(var(--theme) tint(30%) );display:block;line-height:1;}
+  section.inner img {margin-bottom:.4rem;}
+  footer {box-sizing:border-box;border-top:1px solid #ccc;background:color(var(--default) shade(10%) );}
+  footer p{margin:0;color:var(--fontcolor);text-align:center;}
+
+  /*  BREAKPOINTS  */
+  @media (--small) {
+    h1 {font-size:1.8rem;line-height:2.5rem;}
+  	h2 {font-size:1.6rem;line-height:2rem;}
+  	h3 {font-size:1.2rem;line-height:1.8rem;}
+  	h4, h5, h6 {margin-bottom:1.5rem;}
+    header{height:14rem; }
+    p{text-align:left;}
+    footer p{text-align:left;}
+
+    .img-right {width:auto;margin:0 0 0 .7rem;}
+    .img-left {width:auto;margin:0 .7rem 0 0;}
+
+  }
+
+  @media (--medium) {
+    body{font-size:14px;line-height:3;}
+    p{line-height:2;}
+    header{height:22rem;}
+    header h1 span {font-size:1rem;}
+    :--buttons {display:inline-block;width:auto;text-transform:uppercase;padding:0 1.2rem;}
+    img.wide-image {margin:0 auto;display:block;}
+  }

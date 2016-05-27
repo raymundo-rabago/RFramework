@@ -27,11 +27,16 @@ block content
     p
       | Nullam lobortis arcu id turpis tincidunt sagittis. Nunc eget risus fermentum, tincidunt dui sit amet, dignissim sem. Maecenas feugiat sit amet erat sit amet volutpat. Sed tempus, erat quis mollis lobortis, urna tellus facilisis ipsum, non rhoncus felis ipsum eu tortor. Nulla eu convallis nunc. Ut quis erat tempus, tincidunt est sed, viverra libero. Fusce vitae nunc id lorem consectetur tempus.
     a.btn-default(href='#') .btn-default
+
     hr
-    .card
-      .card-header
-        h2.card-title Titulo de Modulo
-      img.card-img(src='http://placehold.it/320x280/727272/FFF', alt='') 
-      .card-body
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique justo sed risus tristique, quis sodales nulla porttitor. Sed vestibulum metus id sodales porttitor. Donec condimentum volutpat ultricies. Praesent interdum suscipit nunc a lobortis. Quisque semper metus nisi, nec dignissim enim dapibus id. Aenean suscipit, leo in suscipit tincidunt, sapien leo mattis odio, sed consequat ante felis sed nulla. Curabitur in sem sed arcu consectetur egestas.
+
+    .row
+      -for(var i=0;i<3;i++)
+        .three-block
+          .card
+            .card-header
+              h2.card-title Titulo de Modulo
+            img.card-img(src='http://placehold.it/320x180/727272/FFF', alt='') 
+            .card-body
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique justo sed risus tristique, quis sodales nulla porttitor. Sed vestibulum metus id sodales porttitor. Donec condimentum volutpat ultricies. Praesent interdum suscipit nunc a lobortis.

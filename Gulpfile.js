@@ -13,7 +13,6 @@ var browserSync     = require('browser-sync').create(),
     jade            = require('gulp-jade');
 
 
-
 // html
 gulp.task('views', function() {
   return gulp.src('src/views/*.jade')
@@ -48,7 +47,6 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./assets/js'))
     .pipe(browserSync.stream());
 });
-
 
 // Live reload server
 gulp.task('server', function() {

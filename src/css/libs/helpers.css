@@ -1,5 +1,31 @@
-/*  HELPERS  */
+  /* responsive-clases */
+  .overflow-container {overflow-y:scroll;}
+  .aspect-ratio {height:0;padding-top:56.25%;position:relative; }
+  .aspect-ratio--object {height:100%;position:absolute;top:0;right:0;bottom:0;left:0;width:100%;z-index:100;}
 
+  /* inline-list */
+  ul.inline-list {list-style:none;margin:0;padding:0;}
+  ul.inline-list li {display:inline-block;text-align:center;}
+  ul.inline-list a {text-decoration:none;padding:1rem;}
+
+  /* content-boxes */
+  .box{background:white;box-sizing:border-box;}
+  .bordered{border:1px solid rgba(0,0,0,0.2);}
+  .bg-cover{background-repeat:no-repeat;background-size:cover;background-position:center center;}
+
+  .shadow-hover {position: relative;}
+  .shadow-hover:after {content: "";position:absolute;top:0;left: 0;width:100%;height:100%;z-index:-1;box-shadow:0 0 6px rgba(0, 0, 0, 0.5);opacity:0;transition:all .5s ease;}
+  .shadow-hover:hover:after {opacity: 1;}
+
+  .darked {position:relative;}
+  .darked-text{position:relative;z-index:10;}
+  .darked:before {content:"";display:block;position:absolute;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0, 0.6);transition:all .3s linear;}
+  .darked:hover:before {opacity:.5}
+
+  /* typography */
+  .text-shadow{text-shadow:1px 1px 2px rgba(0,0,0,0.4);}
+
+  /* colors */
   .color-theme         { color:var(--theme);}
   .color-light-theme   { color:color(var(--theme) tint(10%) );}
   .color-dark-theme    { color:color(var(--theme) shade(10%) );}
