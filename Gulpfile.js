@@ -16,16 +16,16 @@ var browserSync     = require('browser-sync').create(),
 
 // html
 gulp.task('views', function() {
-  return gulp.src('views/*.jade')
+  return gulp.src('src/views/*.jade')
     .pipe(jade({
       pretty: true
     }))
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./'))
 });
 
 // CSS
 gulp.task("css", function() {
-  return gulp.src('css/app.css')
+  return gulp.src('src/css/app.css')
     .pipe(postcss([
       cssimport(),
       cssnest(),
@@ -35,17 +35,17 @@ gulp.task("css", function() {
       cssnano()
     ]))
     .pipe(rename( {suffix: ".min"} ))
-    .pipe(gulp.dest('./dist/assets/css'))
+    .pipe(gulp.dest('./assets/css'))
     .pipe(browserSync.stream());
 });
 
 // JavaScript
 gulp.task('js', function() {
-  return gulp.src('js/libs/*.js')
+  return gulp.src('src/js/libs/*.js')
     .pipe(concat('app.js'))
     .pipe(uglify())
     .pipe(rename( {suffix:".min"} ))
-    .pipe(gulp.dest('./dist/assets/js'))
+    .pipe(gulp.dest('./assets/js'))
     .pipe(browserSync.stream());
 });
 
@@ -55,17 +55,17 @@ gulp.task('server', function() {
     browserSync.init({
         notify: false,
         server: {
-            baseDir: "./dist"
+            baseDir: "./"
         }
     });
 });
 
 // watch tasks
 gulp.task('watch', function () {
-    gulp.watch(['./css/**/*.css'], ['css']);
-    gulp.watch(['./js/*/*.js'], ['js']);
-    gulp.watch(['./views/**/**/*.jade'], ['views']);
-    gulp.watch('./dist/*.html').on('change', browserSync.reload);
+    gulp.watch(['./src/css/**/*.css'], ['css']);
+    gulp.watch(['./src/js/*/*.js'], ['js']);
+    gulp.watch(['./src/views/**/**/*.jade'], ['views']);
+    gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
 // main controller tasks
