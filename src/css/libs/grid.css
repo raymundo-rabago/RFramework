@@ -1,4 +1,4 @@
-/*  SIMPLE GRID  */
+
 .wrapper {margin:0 auto;width:92%;display:block;}
 .row {width:100%;lost-utility: clearfix;}
 .two-block,.three-block,.four-block {width:100%;margin:0 0 1rem 0;}

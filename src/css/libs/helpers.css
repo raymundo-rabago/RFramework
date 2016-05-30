@@ -1,17 +1,18 @@
-  /* responsive-clases */
+  .clearfix:after {content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}  
+  .clearfix {display:inline-block;}
+  html[xmlns] .clearfix {display:block;}  
+  * html .clearfix {height:1%;}
+
   .overflow-container {overflow-y:scroll;}
   .aspect-ratio {height:0;padding-top:56.25%;position:relative; }
   .aspect-ratio--object {height:100%;position:absolute;top:0;right:0;bottom:0;left:0;width:100%;z-index:100;}
 
-  /* inline-list */
-  ul.inline-list {list-style:none;margin:0;padding:0;}
-  ul.inline-list li {display:inline-block;text-align:center;}
-  ul.inline-list a {text-decoration:none;padding:1rem;}
-
-  /* content-boxes */
-  .box{background:white;box-sizing:border-box;}
   .bordered{border:1px solid rgba(0,0,0,0.2);}
   .bg-cover{background-repeat:no-repeat;background-size:cover;background-position:center center;}
+
+  .content-block {display:block;margin:2rem 0;}
+  .hidden{display:none;visibility:hidden;}
+  .overflow-h{overflow:hidden;}
 
   .shadow-hover {position: relative;}
   .shadow-hover:after {content: "";position:absolute;top:0;left: 0;width:100%;height:100%;z-index:-1;box-shadow:0 0 6px rgba(0, 0, 0, 0.5);opacity:0;transition:all .5s ease;}
@@ -22,11 +23,16 @@
   .darked:before {content:"";display:block;position:absolute;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0, 0.6);transition:all .3s linear;}
   .darked:hover:before {opacity:.5}
 
-  /* typography */
+  .text-left{text-align:left;}
+  .text-right{text-align:right;}
+  .text-center{text-align:center;}
+  .text-justify{text-align:justify;}
   .text-uppercase{text-transform:uppercase;}
   .text-shadow{text-shadow:1px 1px 2px rgba(0,0,0,0.4);}
+  .big {font-size:3rem;}
+  .small {font-size:0.8rem;}
+  .title{border-bottom:1px solid #ddd;margin:2rem 0 1rem 0;padding:0.5rem 0;text-transform:uppercase;color:#ddd;}
 
-  /* colors */
   .color-theme         { color:var(--theme);}
   .color-light-theme   { color:color(var(--theme) tint(10%) );}
   .color-dark-theme    { color:color(var(--theme) shade(10%) );}

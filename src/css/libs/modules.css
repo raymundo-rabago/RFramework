@@ -1,4 +1,4 @@
-/* buttons */
+
 button::-moz-focus-inner,input::-moz-focus-inner {border:0;padding:0;}
 :--buttons {
   border:0;font-size:0.7rem;font-weight:normal;text-decoration:none;cursor:pointer;margin-bottom:1rem;box-sizing:border-box;
@@ -17,7 +17,6 @@ button::-moz-focus-inner,input::-moz-focus-inner {border:0;padding:0;}
 .btn-support{background:color(var(--support) shade(10%) )!important;color:color( var(--support) tint(58%) ) !important;}
 .btn-theme  {background:color(var(--theme)   shade(10%) )!important;color:color( var(--theme) tint(88%) ) !important;}
 
-/* cards */
 .card{position:relative;margin:0 0 2rem 0;box-sizing:border-box;background:white;border:1px solid #ccc;font-size:.6rem;border-radius:3px;
 	&-header{background:color(var(--default) shade(10%) );padding:.5rem;}
   &-title{color:var(--fontcolor);font-size:1.1em;line-height:1em;margin:0;}
@@ -25,7 +24,6 @@ button::-moz-focus-inner,input::-moz-focus-inner {border:0;padding:0;}
 	&-body{overflow:hidden;padding:.5rem;}
 }
 
-/* images */
 .img-responsive {max-width:100%;height:auto;}
 .img.thumbnail {background:#fff;padding:3px;border:1px solid #ccc;}
 .img-circle {border-radius:50%;}

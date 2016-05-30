@@ -14,20 +14,9 @@
   @custom-selector :--buttons a[class^="btn-"], button, input[type="submit"], input[type="reset"], input[type="button"];
   @custom-selector :--enter :hover, :focus;
 
-  /*  RESET --------------------------- */
   @import 'libs/reset.css';
-
-  /*  BASE CSS ------------------------ */
   @import 'libs/base.css';
-
-  /*  SIMPLE GRID --------------------- */
   @import 'libs/grid.css';
-
-  /*  MODULES ------------------------- */
-  @import 'libs/modules.css';
-
-  /*  Helpers ------------------------- */
   @import 'libs/helpers.css';
-
-  /*  LAYOUT -------------------------- */
+  @import 'libs/modules.css';
   @import 'libs/layout.css';

@@ -9,7 +9,6 @@
   footer {box-sizing:border-box;border-top:1px solid #ccc;background:color(var(--default) shade(10%) );}
   footer p{margin:0;color:var(--fontcolor);text-align:center;}
 
-  /*  BREAKPOINTS  */
   @media (--small) {
     h1 {font-size:1.8rem;line-height:2.5rem;}
   	h2 {font-size:1.6rem;line-height:2rem;}

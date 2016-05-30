@@ -29,7 +29,7 @@ gulp.task("css", function() {
       cssimport(),
       cssnest(),
       lost(),
-      cssnext({ autoprefixer: {browsers: ['last 4 version']} }),
+      cssnext(),
       mqpacker(),
       cssnano()
     ]))
